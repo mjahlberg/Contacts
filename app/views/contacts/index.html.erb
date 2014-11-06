@@ -1,0 +1,18 @@
+<body class = "wrapper">
+<br><br><br><br>
+<h1>Contact List</h1>
+<div class="newcontact">
+	<%= link_to "New Contact", contacts_new_path%>
+</div>
+    <ul>
+        <% @contacts.each do |b| %>
+            <li class = "list">
+              	<%= link_to b.name, contact_path(b) %>   <br>
+              	<%= b.company %> <br>
+                <%= b.dateinstructed %>
+            </li>
+            <br>
+        <% end %>
+    </ul>
+</body>
+

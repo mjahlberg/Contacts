@@ -1,0 +1,15 @@
+
+
+	<h1> Edit this person! </h1>
+
+<%= form_for @contact do |f| %>
+	Name: <%= f.text_field :name, placeholder: "Name" %>
+	<%= f.text_field :company, placeholder: "Company"%>
+	<%= f.text_field :meeting_location, placeholder: "Meeting Location" %>
+
+	<%= f.submit "Edit this Person!" %>
+
+<% end %>
+
+<%= link_to "Back to the list!", contacts_path %>
+

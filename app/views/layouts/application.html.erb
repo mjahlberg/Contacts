@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Calendar</title>
+	  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  <%= csrf_meta_tags %>
+	  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+
+		<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css" rel="stylesheet">
+		<%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+	  	<%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+	  	<%= csrf_meta_tags %>
+	</head>
+	<body>
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	  		<div class="container">
+		      <ul class="nav navbar-nav">
+		        <li><%= link_to "Home", root_url%></li>
+		        <li><%= link_to "Contacts", contacts_path%></li>
+		        <% if current_user %>
+					<li><%= link_to current_user.email, contacts_path %></li>
+	    			<li><%= link_to "Log Out", session_path, method: :delete %></li>
+	    		<% else %>
+	        		<div class="login"><li><%= link_to "Login", new_session_path %></li></div>
+	        		<div class="login"><li><%= link_to "Create Account", new_user_path %></li></div>
+	    <% end %>
+		      </ul>
+		    </div>
+	  </div>
+	</nav>
+
+	<%= yield %>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

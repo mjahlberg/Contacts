@@ -1,0 +1,13 @@
+<br /><br /><br /><br />
+
+<h1>Please sign in</h1>
+<div class= "signup">
+	<%= form_for @user, {url:session_path} do |f| %>
+
+		<%= f.text_field :email, placeholder: "email" %> <br> <br>
+		<%= f.password_field :password, placeholder: "password" %> <br> <br>
+		<%= f.submit "Let's Go" %> 
+
+	<% end %>
+</div>
+

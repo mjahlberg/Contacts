@@ -1,0 +1,43 @@
+<br><br><br>
+<h1> <%= @contact.name %> </h1>
+    
+    <div class = "list">
+    	<%= @contact.name %> <br>
+    	<%= @contact.company %> <br>
+    	<%= @contact.meeting_location %> <br>
+  		<%= @contact.linkedin %> <br>
+  		<%= @contact.dateinstructed %> <br>
+
+		<%= link_to "Edit", edit_contact_path(@contact) %>
+    	<%= link_to "Delete", @contact, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+    	<%= link_to "Back to the list!", contacts_path %>
+    </div>
+
+    <%= @contact.comments.each do |comment| %>
+    	
+    	<div><%= comment.post %></div>
+      <div><%= comment.date %></div>
+
+<% end %>
+
+<%#= link_to "Delete", @contacts.comment, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
+
+<h1>New Comment</h1>
+  
+	<%= form_for @comment, as: :comment, url: new_comment_path, method: :post do |f| %>
+
+		<%= f.hidden_field :contact_id, :value => @contact.id %>
+
+		<div class="field">
+			<%= f.label :post %> <br>
+			<%= f.text_area :post %>
+		</div>
+    <div class="field">
+      <%= f.label :date %> <br>
+      <%= f.date_select :date, :order => [:day, :month, :year] %> 
+    </div>
+		<div class="actions">
+			<%= f.submit %>
+		</div>
+     <% end %>
+

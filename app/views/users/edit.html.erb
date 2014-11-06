@@ -1,0 +1,9 @@
+<%= form_for @user do |f| %>
+
+	<% f.text_field :email %>
+	<% f.password_field :password %>
+<!-- 	use password_field to hide the actual password -->
+	<% f.password_field :password_confirmation %>
+	<% f.submit "Update" %>
+
+<% end %>
