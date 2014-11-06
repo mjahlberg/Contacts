@@ -15,6 +15,8 @@ gem 'better_errors'
 
 gem "binding_of_caller" 
 
+gem 'rails_12factor'
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.2'
 
