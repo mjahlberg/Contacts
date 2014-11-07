@@ -5,7 +5,3 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-Event.destroy_all
-
-events = Event.create([{subject: "Monday", post: "Today was a good day!"}])

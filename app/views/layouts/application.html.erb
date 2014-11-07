@@ -22,8 +22,8 @@
 					<li><%= link_to current_user.email, contacts_path %></li>
 	    			<li><%= link_to "Log Out", session_path, method: :delete %></li>
 	    		<% else %>
-	        		<div class="login"><li><%= link_to "Login", new_session_path %></li></div>
-	        		<div class="login"><li><%= link_to "Create Account", new_user_path %></li></div>
+	        		<li><div class="login"><%= link_to "Login", new_session_path %></li></div>
+	        		<li><div class="login"><%= link_to "Create Account", new_user_path %></li></div>
 	    <% end %>
 		      </ul>
 		    </div>
