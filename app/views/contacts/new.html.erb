@@ -2,15 +2,18 @@
 <h1> Add a new contact! </h1>
 
 <div class = "newperson">
-<%= form_for @contact, :html => { :multipart => true } do |f| %>
+
+<%= form_for @contact do |f| %>
     <%= f.text_field :name, placeholder: "first/last name", :class => "person"%> 
     <%= f.text_field :company, placeholder: "company", :class => "person" %> 
     <%= f.text_field :meeting_location, placeholder: "meeting location", :class => "person" %> 
    	<%= f.url_field :linkedin, placeholder: "Linkedin", :class => "person"%> <br>
    	<%= f.date_select :dateinstructed, :order => [:month, :day,  :year], :class => "person" %> <br>
-	<%= f.file_field :photos, placeholder: "photo", :class => "photo"%> <br>
+	<%= f.file_field :avatar %>
 
-    <%= f.submit "Add Person", :class => "person"%>
+
+		<%= f.submit "Add Contact!" %>
+	
 
 <% end %>
     

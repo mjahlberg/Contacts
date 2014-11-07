@@ -7,7 +7,7 @@ class CommentController < ApplicationController
 
    	def create
    		# @id = params[:id]
-  #  		@contact = Contact.all
+  		# @contact = Contact.all
 		# @c = @contact.find(@id)
 		@comment = Comment.new(params.require(:comment).permit( :post, :contact_id))
 		# raise params.inspect

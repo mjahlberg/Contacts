@@ -28,7 +28,7 @@ class ContactsController < ApplicationController
 	# end
 
 	def create
-		@contact = Contact.new(params.require(:contact).permit(:name, :company, :meeting_location, :linkedin))
+		@contact = Contact.new(params.require(:contact).permit(:name, :company, :meeting_location, :linkedin, :avatar))
 		if @contact.save
 			redirect_to contacts_path
 		else
@@ -42,7 +42,7 @@ class ContactsController < ApplicationController
 
 	def update
 		@contact = Contact.find(params[:id])
-		if @contact.update_attributes(params.require(:contact).permit(:name, :company, :meeting_location, :linkedin))
+		if @contact.update_attributes(params.require(:contact).permit(:name, :company, :meeting_location, :linkedin, :avatar))
 			redirect_to contacts_path
 		else
 			render 'edit'

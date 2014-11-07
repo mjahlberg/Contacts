@@ -7,6 +7,7 @@
     	<%= @contact.meeting_location %> <br>
   		<%= @contact.linkedin %> <br>
   		<%= @contact.dateinstructed %> <br>
+      <%= image_tag @contact.avatar.url, placeholder: "thephoto"%>
 
 		<%= link_to "Edit", edit_contact_path(@contact) %>
     	<%= link_to "Delete", @contact, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
