@@ -1,3 +1,11 @@
+.header_show {
+	margin-top: 70px;
+}
+
+.wrapper {
+	width: 800px;
+	height: 220px;
+}
 .newperson {
 	margin: 0 auto;
 	text-align: center;
@@ -6,11 +14,60 @@
 	height: 430px;
 	width: 350px;
 }
+.contact_name_show {
+	font-size: 35px;
+}
+.contact_company_show {
+	font-size: 20px;
+}
 
-.thephoto {
-	border-radius: 50px;
-	border: 1px solid black;
-	width: 500px;
+.comment_post {
+	border: 1px solid red;
+	width: 200px;
+	height: 200px;
+}
+
+.contact_name_index {
+	margin-top: 10px;
+	font-size: 40px;
+	width: 350px;
+	height: 30px;
+	float: right;
+	text-decoration:none; 
+	color: black !important;
+}
+
+
+.contact_company_index {
+	margin-top: 35px;
+	font-size: 25px;
+	width: 350px;
+	height: 30px;
+	float: right;
+}
+
+.contact_photo_index {
+	img {
+		border-radius: 50%;
+	}
+}
+
+.btn {
+	float:right;
+	margin-left: 9px;
+	border: none;
+}
+
+.contact_card_show {
+	float: right;
+	width: 350px;
+	height: 160px;
+}
+.contact_photo_show {
+	float: left;
+	img {
+		border-radius: 50%;
+	}
 }
 
 .person {
@@ -22,10 +79,10 @@
 	margin: 5px;
 }
 
-.photo {
-	margin: 0 auto;
-	text-align: center;
-	margin: 5px;
+.glyphicons {
+	border: 3px solid red;
+	width: 200px;
+	height: 100px;
 	float: right;
 }
 
@@ -45,12 +102,12 @@
 .list {
 	list-style-type: none;
 	border: 1px solid black;
-	width: 700px;
-	height: 200px;
+	width: 600px;
+	height: 220px;
 	border-radius: 10px;
 	margin: 20px;
-	margin: 0 auto;
 	padding: 10px;
+	margin-top: 50px;
 }
 
 .newcontact {
@@ -58,4 +115,15 @@
 	text-align: center;
 	padding-top: 10px;
 	padding-bottom: 10px;
+}
+
+.field {
+	width: 60%;
+	margin-left:20%;
+	display:block;
+}
+
+.comment_box_show {
+	float:right;
+	border: 1px solid red;
 }

@@ -1,44 +1,64 @@
-<br><br><br>
-<h1> <%= @contact.name %> </h1>
-    
+<h1 class = "header_show"> Contact </h1>
+  <div class = "wrapper">
     <div class = "list">
-    	<%= @contact.name %> <br>
-    	<%= @contact.company %> <br>
-    	<%= @contact.meeting_location %> <br>
-  		<%= @contact.linkedin %> <br>
-  		<%= @contact.dateinstructed %> <br>
-      <%= image_tag @contact.avatar.url, placeholder: "thephoto"%>
 
-		<%= link_to "Edit", edit_contact_path(@contact) %>
-    	<%= link_to "Delete", @contact, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
-    	<%= link_to "Back to the list!", contacts_path %>
-    </div>
+      	<div class = "contact_card_show">
+          <div class = "contact_name_show"><%= @contact.name %></div>
+      	  <div class = "contact_company_show"><%= @contact.company %></div>
+      	  <%= @contact.meeting_location %>
+    		  <%= @contact.linkedin %>
+        </div> 
 
-    <%= @contact.comments.each do |comment| %>
-    	
-    	<div><%= comment.post %></div>
-      <div><%= comment.date %></div>
+        <div class = "contact_photo_show">
+          <%= image_tag @contact.avatar.url %>
+        </div>
+
+          <%= link_to contacts_path, class: "btn btn-default btn-lg" do %>
+            <i class="glyphicon glyphicon-arrow-left"></i>
+
+          <%= link_to @contact, method: :delete, data: { confirm: 'Are you sure you want to delete it?' }, class: "btn btn-default btn-lg" do %>
+            <i class = "glyphicon glyphicon-trash"></i>    
+
+          <%= link_to edit_contact_path(@contact), class: "btn btn-default btn-lg" do %>
+            <i class = "glyphicon glyphicon-cog"></i>      
+
+        <% end %>
+       
+    </div> 
+      
+  </div>
+
+    <div class="comment_post">
+      
+          <%= form_for @comment, as: :comment, url: new_comment_path, method: :post do |f| %>
+
+          <%= f.hidden_field :contact_id, :value => @contact.id %>
+
+          <div>
+            <%= f.label :post %>
+            <%= f.text_area :post %>
+          </div>
+       
+          <div>
+            <%= f.submit %>
+
+          </div>
+          <div>
+            <% @contact.comments.each do |comment| %>
+            <%= comment.post %>
+          </div>
+
+          <% end %>
+        <% end %>
+
+      <% end %>
 
 <% end %>
 
+  
+</div>
+
+
 <%#= link_to "Delete", @contacts.comment, method: :delete, data: { confirm: 'Are you sure you want to delete it?' } %>
 
-<h1>New Comment</h1>
-  
-	<%= form_for @comment, as: :comment, url: new_comment_path, method: :post do |f| %>
-
-		<%= f.hidden_field :contact_id, :value => @contact.id %>
-
-		<div class="field">
-			<%= f.label :post %> <br>
-			<%= f.text_area :post %>
-		</div>
-    <div class="field">
-      <%= f.label :date %> <br>
-      <%= f.date_select :date, :order => [:day, :month, :year] %> 
-    </div>
-		<div class="actions">
-			<%= f.submit %>
-		</div>
-     <% end %>
 

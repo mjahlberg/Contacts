@@ -18,14 +18,15 @@
 		      <ul class="nav navbar-nav">
 		        <li><%= link_to "Home", root_url%></li>
 		        <li><%= link_to "Contacts", contacts_path%></li>
-		        <% if current_user %>
+		      </ul>
+		      <ul class="nav navbar-nav navbar-right">
+		      	<% if current_user %>
 					<li><%= link_to current_user.email, contacts_path %></li>
 	    			<li><%= link_to "Log Out", session_path, method: :delete %></li>
 	    		<% else %>
 	        		<li><%= link_to "Login", new_session_path %></li>
 	        		<li><%= link_to "Create Account", new_user_path %></div></li>
 	    		<% end %>
-		      </ul>
 		    </div>
 	  </div>
 	</nav>

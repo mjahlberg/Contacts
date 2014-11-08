@@ -1,17 +1,16 @@
 <body class = "wrapper">
 <br><br><br><br>
-<h1>Contact List</h1>
+<h1>List of Contacts</h1>
 <div class="newcontact">
 	<%= link_to "New Contact", contacts_new_path%>
 </div>
     <ul>
         <% @contacts.each do |b| %>
             <li class = "list">
-              	<%= link_to b.name, contact_path(b) %>   <br>
-              	<%= b.company %> <br>
-                <%= b.avatar %>
+              	<div class = "contact_name_index"><%= link_to b.name, contact_path(b) %></div>
+              	<div class = "contact_company_index"><%= b.company %> </div>
+                <div class = "contact_photo_index"><%= image_tag b.avatar.url %></div>
             </li>
-            <br>
         <% end %>
     </ul>
 </body>

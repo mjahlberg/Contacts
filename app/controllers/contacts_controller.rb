@@ -42,7 +42,7 @@ class ContactsController < ApplicationController
 
 	def update
 		@contact = Contact.find(params[:id])
-		if @contact.update_attributes(params.require(:contact).permit(:name, :company, :meeting_location, :linkedin, :avatar))
+		if @contact.update_attributes(params.require(:contact).permit(:name, :company, :meeting_location, :linkedin))
 			redirect_to contacts_path
 		else
 			render 'edit'
