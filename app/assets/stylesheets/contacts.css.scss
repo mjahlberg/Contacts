@@ -3,8 +3,10 @@
 }
 
 .wrapper {
-	width: 800px;
+	width: 600px;
 	height: 220px;
+	margin-top: 100px;
+	background-color: red;
 }
 .newperson {
 	margin: 0 auto;
@@ -21,12 +23,29 @@
 	font-size: 20px;
 }
 
-.comment_post {
+.comment_show_box {
 	border: 1px solid red;
-	width: 200px;
-	height: 200px;
+	width: 100px;
+	height: 100px;
+	margin-right: 400px;
+	margin-top: 110px;
+	float: left;
+	display: inline;
 }
 
+.comment_post_area {
+
+}
+
+.example {
+	display: inline;
+}
+
+.comment_post_submit {
+	width: 142px;
+	height: 46px;
+	padding: 20px;
+}
 .contact_name_index {
 	margin-top: 10px;
 	font-size: 40px;
@@ -34,9 +53,7 @@
 	height: 30px;
 	float: right;
 	text-decoration:none; 
-	color: black !important;
 }
-
 
 .contact_company_index {
 	margin-top: 35px;
@@ -108,6 +125,7 @@
 	margin: 20px;
 	padding: 10px;
 	margin-top: 50px;
+	background-color: yellow;
 }
 
 .newcontact {
@@ -124,6 +142,7 @@
 }
 
 .comment_box_show {
-	float:right;
+	width: 150px;
+	height: 150px;
 	border: 1px solid red;
 }

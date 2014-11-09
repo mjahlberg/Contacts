@@ -1,4 +1,5 @@
 <h1 class = "header_show"> Contact </h1>
+  
   <div class = "wrapper">
     <div class = "list">
 
@@ -28,34 +29,29 @@
       
   </div>
 
-    <div class="comment_post">
-      
-          <%= form_for @comment, as: :comment, url: new_comment_path, method: :post do |f| %>
+<div>
+      <%= form_for @comment, as: :comment, url: new_comment_path, method: :post do |f| %>
 
-          <%= f.hidden_field :contact_id, :value => @contact.id %>
+      <%= f.hidden_field :contact_id, :value => @contact.id %>
 
-          <div>
-            <%= f.label :post %>
-            <%= f.text_area :post %>
-          </div>
-       
-          <div>
-            <%= f.submit %>
+        <div>
+          <%= f.text_area :post %> 
+        </div>
+   
+        <div>
+          <%= f.submit %>
 
-          </div>
-          <div>
-            <% @contact.comments.each do |comment| %>
-            <%= comment.post %>
-          </div>
-
-          <% end %>
-        <% end %>
+        </div>
+        
+        <div>
+          <% @contact.comments.each do |comment| %>
+          <%= comment.post %>
+        </div>
 
       <% end %>
-
-<% end %>
-
-  
+      <% end %>
+    <% end %>
+  <% end %>  
 </div>
 
 
