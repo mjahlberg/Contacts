@@ -1,0 +1,55 @@
+
+<body class = "body-show">
+  <h1 class = "contactheader-show"> Client</h1>
+<div class = "coolness1">
+  <div class = "contact_card_show">
+    <div class = "contact_name_show"><%= @client.name %></div>
+    <div class = "contact_company_show"><%= @client.source %></div>
+      
+  </div> 
+<!--   <div class = "contact_photo_show">
+    <%= image_tag @client.avatar.url %>
+  </div> -->
+  <%= link_to clients_path, class: "btn btn-default btn-lg" do %>
+      <i class="glyphicon glyphicon-arrow-left"></i>
+    <% end %>
+    <%= link_to @client, method: :delete, data: { confirm: 'Are you sure you want to delete it?' }, class: "btn btn-default btn-lg" do %>
+      <i class = "glyphicon glyphicon-trash"></i>    
+    <% end %>
+    <%= link_to edit_client_path(@client), class: "btn btn-default btn-lg" do %>
+      <i class = "glyphicon glyphicon-cog"></i>      
+    <% end %>
+
+    <div class="making-a-comment">
+      <%= form_for @article, as: :article, url: new_article_path, method: :account do |f| %>
+
+        <%= f.hidden_field :client_id, :value => @client.id %>
+
+        <div>
+            <%= f.text_area :account , :rows => 5, :class => "form-control", :placeholder => 'Enter text.'%> 
+        </div>
+     
+        <div>
+            <%= button_tag(type: 'submit', class: "btn btn-primary") do %>
+              <i class="icon-ok icon-white"></i> submit
+            <% end %>
+
+        </div>
+        
+      <% end %>
+    </div>
+
+</div>
+
+<div class = "coolness2">
+  <h1>Comments</h1>
+  <div class="comments-box">
+      <% @client.articles.each do |c| %>
+      <p><%= c.account%></p> 
+      <p><strong><i><%=Time.now.strftime("%m/%d/%Y")%></strong>
+      <br>
+    <% end %> 
+  </div>
+</div>
+
+</body>

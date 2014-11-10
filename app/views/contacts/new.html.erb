@@ -1,20 +1,25 @@
+<body class = "body-new">
 <br><br><br>
-<h1> Add a new contact! </h1>
+<h1> New Contact </h1>
 
 <div class = "newperson">
 
 <%= form_for @contact do |f| %>
-    <%= f.text_field :name, placeholder: "first/last name", :class => "person"%> 
-    <%= f.text_field :company, placeholder: "company", :class => "person" %> 
-    <%= f.text_field :meeting_location, placeholder: "meeting location", :class => "person" %> 
-   	<%= f.url_field :linkedin, placeholder: "Linkedin", :class => "person"%> <br>
-	<%= f.file_field :avatar %>
+    <%= f.text_field :name, type: "text", :class => "form-control new-person-form", placeholder: "Name"%> 
+    <%= f.text_field :company, type: "text", :class => "form-control new-person-form", placeholder: "Company"%> 
+    <%= f.text_field :meeting_location, type: "text", :class => "form-control new-person-form", placeholder: "Meeting Location" %> 
+   	<%= f.url_field :linkedin, type: "text", :class => "form-control new-person-form", placeholder: "Linkedin"%>  <br>
+	<%= f.file_field :avatar, :class => "image-choice-button" %>
 
-		<%= f.submit "Add Contact!" %>
+		<%= button_tag(type: 'submit', class: "btn btn-primary btn-new") do %>
+              <i class="icon-ok icon-white"></i> submit
+            <% end %>
 
 <% end %>
     
 </div>
+
+</body>
 
 
 

@@ -1,16 +1,20 @@
+<body class = "body-new">
 
+<h1> Edit this person! </h1>
 
-	<h1> Edit this person! </h1>
+<div class = "newperson">
 
 <%= form_for @contact do |f| %>
-	Name: <%= f.text_field :name, placeholder: "Name" %>
-	<%= f.text_field :company, placeholder: "Company"%>
-	<%= f.text_field :meeting_location, placeholder: "Meeting Location" %>
-	<%= f.text_field :linkedin, placeholder: "Meeting Location" %>
+    <%= f.text_field :name, type: "text", :class => "form-control new-person-form", placeholder: "Name"%> 
+    <%= f.text_field :company, type: "text", :class => "form-control new-person-form", placeholder: "Company"%> 
+    <%= f.text_field :meeting_location, type: "text", :class => "form-control new-person-form", placeholder: "Meeting Location" %> 
+   	<%= f.url_field :linkedin, type: "text", :class => "form-control new-person-form", placeholder: "Linkedin"%>  <br>
 
-	<%= f.submit "Edit this Person!" %>
+		<%= button_tag(type: 'submit', class: "btn btn-primary btn-new") do %>
+              <i class="icon-ok icon-white"></i> submit
+            <% end %>
 
 <% end %>
-
 <%= link_to "Back to the list!", contacts_path %>
 
+</body>

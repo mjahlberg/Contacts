@@ -1,0 +1,16 @@
+<br><br><br>
+<h1> New Company </h1>
+
+<div class = "newperson">
+
+<%= form_for @client do |f| %>
+    <%= f.text_field :name, placeholder: "Company Name", :class => "person"%> 
+    <%= f.text_field :source, placeholder: "Source", :class => "person" %> 
+
+	<%= f.file_field :avatar %>
+
+	<%= f.submit "Add Company" %>
+
+<% end %>
+    
+</div>

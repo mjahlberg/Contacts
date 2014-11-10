@@ -1,0 +1,15 @@
+
+<h1> Edit this person! </h1>
+
+<%= form_for @client do |f| %>
+	<%= f.text_field :name, placeholder: "Name" %>
+	<%= f.text_field :source, placeholder: "Source"%>
+	
+	
+
+	<%= f.submit "Edit this Person!" %>
+
+<% end %>
+
+<%= link_to "Back to the list!", clients_path %>
+

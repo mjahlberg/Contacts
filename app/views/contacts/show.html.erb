@@ -46,7 +46,7 @@
   <div class="comments-box">
       <% @contact.comments.each do |comment| %>
       <p><%= comment.post%></p> 
-      <p><strong><i><%=Time.now.strftime("%m/%d/%Y")%></strong>
+      <p><strong><i><%=Time.now.strftime("%m/%d/%Y")%></strong></p>
       <br>
     <% end %> 
   </div>

@@ -1,0 +1,23 @@
+<body class = "body-show">
+<h1 class = "contact-header-index">List of Companies</h1>
+<div class = "newpersonbutton-index">
+    <%= link_to clients_new_path, class: "btn btn-primary" do %>
+      New Company
+    <% end %>
+</div>
+<div class="newcontact">
+
+    <ul>
+        <% @clients.each do |b| %>
+            <li class = "list">
+              	<div class = "contact_name_index"><%= link_to b.name, client_path(b) %></div>
+              	<div class = "contact_company_index"><%= b.source %> </div>
+                <div class = "contact_photo_index"><%= image_tag b.avatar.url %></div>
+            </li>
+        <% end %>
+    </ul>
+</div>
+</body>
+
+
+
