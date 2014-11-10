@@ -1,9 +1,12 @@
-<body class = "wrapper">
-<br><br><br><br>
-<h1>List of Contacts</h1>
-<div class="newcontact">
-	<%= link_to "New Contact", contacts_new_path%>
+<body class = "body-show">
+<h1 class = "contact-header-index">List of Contacts</h1>
+<div class = "newpersonbutton-index">
+    <%= link_to contacts_new_path, class: "btn btn-primary" do %>
+      New Person
+    <% end %>
 </div>
+<div class="newcontact">
+
     <ul>
         <% @contacts.each do |b| %>
             <li class = "list">
@@ -13,5 +16,8 @@
             </li>
         <% end %>
     </ul>
+</div>
 </body>
+
+
 
