@@ -7,6 +7,7 @@ Calendar::Application.routes.draw do
 
   root 'welcome#index'
 
+  get 'facts' => 'facts#index', as: :facts
   # -------------------------------------------------------------------
 
   #CREATE

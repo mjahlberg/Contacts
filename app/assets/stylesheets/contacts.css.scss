@@ -39,11 +39,13 @@
 }
 
 .form-control {
-	border-radius: 10px;
+
 	resize: none;
 	background-color: rgba(255,255,255,.7);
 	border: 9px solid white;
-	margin-right: 10%;
+	margin-right: 15%;
+	float: left;
+
 }
 
 .new-person-form {
@@ -122,6 +124,7 @@
 .contact_photo_index {
 	img {
 		border-radius: 50%;
+		height: 180px;
 	}
 }
 
@@ -158,8 +161,9 @@
 }
 .contact_photo_show {
 	float: left;
-	margin-top: 25px;
+	margin-top: 10px;
 	margin-left: 10px;
+	height: 150px;
 	img {
 		border-radius: 50%;
 	}

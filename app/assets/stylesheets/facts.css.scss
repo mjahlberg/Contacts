@@ -1,0 +1,23 @@
+.about-page {
+	background: url(/assets/city-picture.png) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	z-index: 0
+}
+
+#about-page-opacity {
+	
+
+}
+
+.about-page-info {
+	margin-top: 17%;
+	font-size: 40px;
+	color: white;
+	font-family: Open Sans;
+	background-color: black;
+	opacity: .8;
+	border-radius: 10%;
+}

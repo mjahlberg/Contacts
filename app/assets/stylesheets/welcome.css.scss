@@ -22,6 +22,22 @@
 	
 }
 
+.body-welcomepage {
+	background: url(/assets/people.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.welcome-header {
+	font-family: Open Sans;
+	float:right;
+	font-size: 50px;
+	margin-right: 7%;
+	color: white;
+}
+
 
 
 .welcome-picture-1 {

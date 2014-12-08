@@ -15,21 +15,22 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.text_field :email %>
+<div class = "newperson">
+  <div>
+    <br>
+    <%= f.text_field :email, placeholder: "email", :class=>"form-control new-person-form" %>
   </div>
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password %>
+  <div>
+    <br>
+    <%= f.password_field :password, placeholder: "password", :class=>"form-control new-person-form" %>
   </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation %>
+  <div>
+    <br>
+    <%= f.password_field :password_confirmation, placeholder: "password", :class=>"form-control new-person-form" %>
   </div>
-  <div class="actions"><%= f.submit "Sign Up" %></div>
+  <div ><%= f.submit "Sign Up", :class=> "btn btn-primary btn-new" %></div>
 <% end %>
+</div>
 
 <!-- use placeholder: "email" for text inside box and :class => "email" to assign a class for each text field
 
