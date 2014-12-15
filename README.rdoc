@@ -1,28 +1,5 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+My main intention with this project was to create a database of contacts. With Linkedin I would lose track of who I came in contact with so I created this application in order to easily keep track of people I had met.
 
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+This was project 2 of WDI at General Assembly. The project was created with Ruby on Rails, HTML, CSS, and MongoDB. The main intention of the project was to understand the usage of MVC for Rails and gain a strong hold on the general layout of the framework.
