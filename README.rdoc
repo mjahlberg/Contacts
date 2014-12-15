@@ -1,5 +1,7 @@
 == README
 
+You should only need to git clone this project, run a 'bundle install' and then start the rails server.
+
 My main intention with this project was to create a database of contacts. With Linkedin I would lose track of who I came in contact with so I created this application in order to easily keep track of people I had met.
 
 This was project 2 of WDI at General Assembly. The project was created with Ruby on Rails, HTML, CSS, and MongoDB. The main intention of the project was to understand the usage of MVC for Rails and gain a strong hold on the general layout of the framework.
